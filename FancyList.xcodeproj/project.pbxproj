@@ -11,7 +11,20 @@
 		2FB0D72225E29DE100A3EF45 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0D72125E29DE100A3EF45 /* ContentView.swift */; };
 		2FB0D72425E29DE100A3EF45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB0D72325E29DE100A3EF45 /* Assets.xcassets */; };
 		2FB0D72725E29DE100A3EF45 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB0D72625E29DE100A3EF45 /* Preview Assets.xcassets */; };
+		2FB0D73025E29E0E00A3EF45 /* RowContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0D72F25E29E0E00A3EF45 /* RowContent.swift */; };
+		2FB0D73925EACED600A3EF45 /* FancyListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0D73825EACED600A3EF45 /* FancyListTests.swift */; };
+		2FB0D74325EADCDA00A3EF45 /* TestStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0D74225EADCDA00A3EF45 /* TestStub.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2FB0D73B25EACED600A3EF45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2FB0D71425E29DE100A3EF45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2FB0D71B25E29DE100A3EF45;
+			remoteInfo = FancyList;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2FB0D71C25E29DE100A3EF45 /* FancyList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FancyList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,10 +33,22 @@
 		2FB0D72325E29DE100A3EF45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FB0D72625E29DE100A3EF45 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2FB0D72825E29DE100A3EF45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FB0D72F25E29E0E00A3EF45 /* RowContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowContent.swift; sourceTree = "<group>"; };
+		2FB0D73625EACED600A3EF45 /* FancyListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FancyListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FB0D73825EACED600A3EF45 /* FancyListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyListTests.swift; sourceTree = "<group>"; };
+		2FB0D73A25EACED600A3EF45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FB0D74225EADCDA00A3EF45 /* TestStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStub.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2FB0D71925E29DE100A3EF45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FB0D73325EACED600A3EF45 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				2FB0D71E25E29DE100A3EF45 /* FancyList */,
+				2FB0D73725EACED600A3EF45 /* FancyListTests */,
 				2FB0D71D25E29DE100A3EF45 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				2FB0D71C25E29DE100A3EF45 /* FancyList.app */,
+				2FB0D73625EACED600A3EF45 /* FancyListTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,6 +81,7 @@
 			children = (
 				2FB0D71F25E29DE100A3EF45 /* FancyListApp.swift */,
 				2FB0D72125E29DE100A3EF45 /* ContentView.swift */,
+				2FB0D72F25E29E0E00A3EF45 /* RowContent.swift */,
 				2FB0D72325E29DE100A3EF45 /* Assets.xcassets */,
 				2FB0D72825E29DE100A3EF45 /* Info.plist */,
 				2FB0D72525E29DE100A3EF45 /* Preview Content */,
@@ -67,6 +95,16 @@
 				2FB0D72625E29DE100A3EF45 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2FB0D73725EACED600A3EF45 /* FancyListTests */ = {
+			isa = PBXGroup;
+			children = (
+				2FB0D73825EACED600A3EF45 /* FancyListTests.swift */,
+				2FB0D74225EADCDA00A3EF45 /* TestStub.swift */,
+				2FB0D73A25EACED600A3EF45 /* Info.plist */,
+			);
+			path = FancyListTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +127,24 @@
 			productReference = 2FB0D71C25E29DE100A3EF45 /* FancyList.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2FB0D73525EACED600A3EF45 /* FancyListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FB0D73D25EACED600A3EF45 /* Build configuration list for PBXNativeTarget "FancyListTests" */;
+			buildPhases = (
+				2FB0D73225EACED600A3EF45 /* Sources */,
+				2FB0D73325EACED600A3EF45 /* Frameworks */,
+				2FB0D73425EACED600A3EF45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2FB0D73C25EACED600A3EF45 /* PBXTargetDependency */,
+			);
+			name = FancyListTests;
+			productName = FancyListTests;
+			productReference = 2FB0D73625EACED600A3EF45 /* FancyListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -100,6 +156,10 @@
 				TargetAttributes = {
 					2FB0D71B25E29DE100A3EF45 = {
 						CreatedOnToolsVersion = 12.3;
+					};
+					2FB0D73525EACED600A3EF45 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 2FB0D71B25E29DE100A3EF45;
 					};
 				};
 			};
@@ -117,6 +177,7 @@
 			projectRoot = "";
 			targets = (
 				2FB0D71B25E29DE100A3EF45 /* FancyList */,
+				2FB0D73525EACED600A3EF45 /* FancyListTests */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +192,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2FB0D73425EACED600A3EF45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -140,10 +208,28 @@
 			files = (
 				2FB0D72225E29DE100A3EF45 /* ContentView.swift in Sources */,
 				2FB0D72025E29DE100A3EF45 /* FancyListApp.swift in Sources */,
+				2FB0D73025E29E0E00A3EF45 /* RowContent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FB0D73225EACED600A3EF45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FB0D73925EACED600A3EF45 /* FancyListTests.swift in Sources */,
+				2FB0D74325EADCDA00A3EF45 /* TestStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2FB0D73C25EACED600A3EF45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2FB0D71B25E29DE100A3EF45 /* FancyList */;
+			targetProxy = 2FB0D73B25EACED600A3EF45 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2FB0D72925E29DE100A3EF45 /* Debug */ = {
@@ -306,6 +392,46 @@
 			};
 			name = Release;
 		};
+		2FB0D73E25EACED600A3EF45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 988VW22UE7;
+				INFOPLIST_FILE = FancyListTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Nate.FancyListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FancyList.app/FancyList";
+			};
+			name = Debug;
+		};
+		2FB0D73F25EACED600A3EF45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 988VW22UE7;
+				INFOPLIST_FILE = FancyListTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Nate.FancyListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FancyList.app/FancyList";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -323,6 +449,15 @@
 			buildConfigurations = (
 				2FB0D72C25E29DE100A3EF45 /* Debug */,
 				2FB0D72D25E29DE100A3EF45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FB0D73D25EACED600A3EF45 /* Build configuration list for PBXNativeTarget "FancyListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FB0D73E25EACED600A3EF45 /* Debug */,
+				2FB0D73F25EACED600A3EF45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
