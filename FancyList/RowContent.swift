@@ -20,10 +20,21 @@ struct Loader: View {
     }
 }
 
+enum RowStatus {
+    case centered
+    case lockedLeft
+    case lockedRight
+}
+
 struct RowContent : View {
+    @State var rowStatus:RowStatus = .centered
     let text : String
     let index : Int
-    let width : CGFloat = 60
+    let buttonWidth : CGFloat = 60
+    let leftButtonsCount: Int = 1
+    let rightButtonsCount: Int = 2
+    
+    
     @Binding var indices : [Int]
     @State var offset = CGSize.zero
     @State var offsetY : CGFloat = 0
@@ -37,7 +48,7 @@ struct RowContent : View {
                     .font(.system(size: 20))
                     .scaleEffect(scale)
                 }
-                .frame(width: 60, height: geo.size.height)
+                .frame(width:buttonWidth, height: geo.size.height)
                 .background(Color.green.opacity(0.15))
                 .onTapGesture {
                     print("checked")
@@ -51,7 +62,7 @@ struct RowContent : View {
                  .font(.system(size: 20))
                  .scaleEffect(scale)
               }
-               .frame(width: width, height: geo.size.height)
+               .frame(width: buttonWidth, height: geo.size.height)
                .background(Color.purple.opacity(0.15))
                .onTapGesture {
                    indices.append(index)
@@ -65,7 +76,7 @@ struct RowContent : View {
                            .offset(y: self.offsetY)
                    )
                }
-                   .frame(width: 60, height: geo.size.height)
+                   .frame(width: buttonWidth, height: geo.size.height)
                    .background(Color.red.opacity(0.15))
                    .onTapGesture {
                        // Do Something
@@ -84,17 +95,30 @@ struct RowContent : View {
                  .onEnded { _ in
                             if self.offset.width < -120 {
                                 self.scale = 1
-                                self.offset.width = -180//-120
+                                if self.rowStatus == .lockedRight{
+                                    self.offset.width = -60
+                                }else{
+                                    self.offset.width = -buttonWidth * CGFloat(rightButtonsCount)//-180//-120
+                                }
+                                
                                 self.offsetY = -20
+                                self.rowStatus = .lockedLeft
                             } else if self.offset.width > 35 {
                                 self.scale = 1
-                                self.offset.width = 0
+                                if self.rowStatus == .lockedLeft {
+                                    self.offset.width = -60
+                                }else{
+                                    self.offset.width = 0
+                                }
+                              
                                 self.offsetY = 0
+                                self.rowStatus = .lockedRight
                             } else {
                                 self.scale = 0.5
                                // self.offset = .zero
                                 self.offset.width = -60
                                 self.offsetY = 0
+                                self.rowStatus = .centered
                             }
                           }
                    )
